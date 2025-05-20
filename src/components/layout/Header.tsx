@@ -101,77 +101,10 @@ export const Header = () => {
             {/* Primary Navigation */}
             <div className="flex-1">
             <div className="hidden lg:flex gap-6 text-white ml-8">
-              <Link href="https://www.cuchd.in/" className="nav-link py-1 flex items-center gap-1">
-                Campuses
-              </Link>
-              <div className="relative group"
-                onMouseEnter={() => setActiveMenu("about")}
-                onMouseLeave={() => setActiveMenu(null)}
-              >
-                <button
-                  className="nav-link py-1 flex items-center gap-1"
-                  aria-haspopup="true"
-                  aria-expanded={activeMenu === "about"}
-                  type="button"
-                >
-                  About
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-                </button>
-                {activeMenu === "about" && (
-                  <div className="mega-menu z-50 absolute left-0 mt-2 bg-white text-black rounded-lg shadow-lg flex gap-12 p-8">
-                    <div className="mega-menu-column">
-                      <h4 className="mega-menu-title font-bold mb-2">WHO WE ARE</h4>
-                      <Link href="/about/" className="mega-menu-link block mb-1">Overview</Link>
-                      <Link href="/about/our-identity.php" className="mega-menu-link block mb-1">Our Identity</Link>
-                      <Link href="/about/vision-and-mission.php" className="mega-menu-link block mb-1">Vision & Mission</Link>
-                      <Link href="/about/LeaderShip.php" className="mega-menu-link block mb-1">LeaderShip</Link>
-                      <Link href="/core-values/" className="mega-menu-link block mb-1">Core Values</Link>
-                      <Link href="/recognitions-and-approvals/" className="mega-menu-link block mb-1">Recognition & Approvals</Link>
-                      <Link href="/about/Awards-and-Rankings.php" className="mega-menu-link block mb-1">Awards & Rankings</Link>
-                      <Link href="/about/institution-social-responsibility.php" className="mega-menu-link block mb-1">Institutional Social Responsibility</Link>
-                      <Link href="/admissions/cu-edge.php" className="mega-menu-link block mb-1">CU Edge</Link>
-                    </div>
-                    <div className="mega-menu-column">
-                      <h4 className="mega-menu-title font-bold mb-2">RELATED LINKS</h4>
-                      <Link href="/academics/institutes.php" className="mega-menu-link block mb-1">Institutes & Departments</Link>
-                      <Link href="/admissions/" className="mega-menu-link block mb-1">Admissions</Link>
-                      <Link href="/scholarship/" className="mega-menu-link block mb-1">Scholarships</Link>
-                      <Link href="/about/governance.php" className="mega-menu-link block mb-1">Governance</Link>
-                      <Link href="/student-services/hostel-facility.php" className="mega-menu-link block mb-1">Hostel Facility</Link>
-                      <Link href="/student-services/" className="mega-menu-link block mb-1">Student Services</Link>
-                      <Link href="/contact/how-to-reach-us.php" className="mega-menu-link block mb-1">How to Reach Us?</Link>
-                      <Link href="/GATI-charter-institution.php" className="mega-menu-link block mb-1">GATI Charter Institution</Link>
-                      <Link href="/abet/" className="mega-menu-link block mb-1">ABET Engineering Accreditation</Link>
-                    </div>
-                    <div className="flex flex-col items-center justify-center">
-                      <h3 className="text-xl font-bold text-[#1f425c] mb-4">Chandigarh University Best Educational Institution</h3>
-                      <div className="flex gap-8">
-                        <div className="flex flex-col items-center">
-                          <Image src="https://ext.same-assets.com/2241434697/3783633550.svg" alt="Human Dignity" width={50} height={50} />
-                          <span className="text-sm text-gray-700 mt-2">Human Dignity</span>
-                        </div>
-                        <div className="flex flex-col items-center">
-                          <Image src="https://ext.same-assets.com/2241434697/2563901416.svg" alt="Empathy" width={50} height={50} />
-                          <span className="text-sm text-gray-700 mt-2">Empathy</span>
-                        </div>
-                        <div className="flex flex-col items-center">
-                          <Image src="https://ext.same-assets.com/2241434697/548389142.svg" alt="Humility" width={50} height={50} />
-                          <span className="text-sm text-gray-700 mt-2">Humility</span>
-                        </div>
-                        <div className="flex flex-col items-center">
-                          <Image src="https://ext.same-assets.com/2241434697/260646423.svg" alt="Giving" width={50} height={50} />
-                          <span className="text-sm text-gray-700 mt-2">Giving</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-              <Link href="/international/index.php" className="nav-link py-2">International</Link>
               <Link href="/student-services/libraries.php" className="nav-link py-2">Library</Link>
               <Link href="/student-services/" className="nav-link py-2">Student Services</Link>
               <Link href="/jobs/" className="nav-link py-2">Career</Link>
-              <Link href="/blogs/" className="nav-link py-2">Blogs</Link>
+              <Link href="/spec-talk/" className="nav-link py-2">SPEC Talk</Link>
               <Link href="/contact/index.php" className="nav-link py-2">Contact Us</Link>
             </div>
             </div>
