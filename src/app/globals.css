@@ -127,13 +127,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Announcement Bar Animation */
 .announcement-bar {
-  background-color: rgba(196, 12, 18, 0.8);
+  background-color: transparent;
   padding: 0.5rem 0;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
   z-index: 50;
-  backdrop-filter: blur(5px);
 }
 
 .announcement-content {
