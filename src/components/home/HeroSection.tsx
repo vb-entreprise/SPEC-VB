@@ -8,7 +8,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen overflow-hidden pt-[240px]">
+    <section className="relative min-h-screen overflow-hidden pt-[180px]">
       {/* Background Image */}
       <Image
         src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=80"
@@ -22,8 +22,28 @@ export const HeroSection = () => {
       <div className="fixed inset-0 bg-black/60 -z-10"></div>
 
       <div className="cu-container relative h-full flex items-center justify-between z-10">
+        {/* Ranking Image */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl bg-white rounded-lg overflow-hidden">
+          <div className="text-center py-8 px-4">
+            <h1 className="text-[#c40c12] text-4xl font-bold mb-2">SARDAR PATEL EDUCATION CAMPUS</h1>
+            <p className="text-2xl mb-4">Enters The League of</p>
+            <div className="text-[#f7941d] text-6xl font-bold leading-tight mb-4">
+              GUJARAT'S TOP 5<br />
+              ENGINEERING COLLEGES
+            </div>
+            <p className="text-2xl mb-4">by GUJARAT TECHNOLOGICAL UNIVERSITY</p>
+            <p className="text-5xl font-bold">2025</p>
+            <div className="mt-8 bg-[#f7941d] py-6">
+              <p className="text-3xl text-white">
+                <span className="font-bold">RANKED 5TH</span> | STATEWIDE<br />
+                GTU ENGINEERING CATEGORY
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* Left Content - Visible on larger screens */}
-        <div className="hidden md:block text-white max-w-xl">
+        <div className="hidden md:block text-white max-w-xl mt-[400px]">
           <h1 className="text-4xl font-bold mb-4">
             Best Private University in Punjab (India)
           </h1>
