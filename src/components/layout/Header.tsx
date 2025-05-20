@@ -99,7 +99,7 @@ export const Header = () => {
             </Link>
 
             {/* Primary Navigation */}
-            <div className="flex-1 flex justify-center">
+            <div className="flex-1 flex justify-start ml-20">
             <div className="hidden lg:flex gap-8 text-white">
               <Link href="/student-services/libraries.php" className="nav-link py-2">Library</Link>
               <Link href="/student-services/" className="nav-link py-2">Student Services</Link>
@@ -133,7 +133,7 @@ export const Header = () => {
           
           {/* Secondary Navigation */}
           <div className="mt-2">
-            <div className="max-w-[900px] mx-auto">
+            <div className="max-w-[900px] mx-auto ml-20">
               <div className={`hidden lg:flex justify-center items-center py-2 px-12 rounded-lg ${
                 scrolled ? 'bg-white/20 backdrop-blur-lg' : 'bg-black/20 backdrop-blur-sm'
               }`}>
