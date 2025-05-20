@@ -5,7 +5,7 @@ import Image from "next/image"
 
 export const RankingBanner = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="bg-[#0b578a] py-16">
       <div className="cu-container">
         <div className="max-w-4xl mx-auto bg-white rounded-lg overflow-hidden">
           <div className="text-center py-8 px-4">
