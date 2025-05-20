@@ -8,18 +8,18 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 export const HeroSection = () => {
   return (
-    <section className="relative h-[800px] md:h-[800px] overflow-hidden mt-[220px]">
+    <section className="relative h-screen overflow-hidden">
       {/* Background Image */}
       <Image
         src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=80"
         alt="SPEC Institutes Background"
         fill
         priority
-        className="object-cover brightness-75"
+        className="object-cover"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       <div className="cu-container relative h-full flex items-center justify-between z-10">
         {/* Left Content - Visible on larger screens */}
