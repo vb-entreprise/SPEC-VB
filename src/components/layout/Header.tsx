@@ -77,7 +77,7 @@ export const Header = () => {
 
       {/* Main Header */}
       <div className="relative">
-        <div className="cu-container flex justify-between items-center py-3 relative z-10">
+        <div className="cu-container flex items-center py-3 relative z-10">
           <Link href="/" className="z-10">
             <Image
               src="https://spec.edu.in//images/Colleges_Logo/EMBOSS-LOGO-SPEC-INSTITUTES.png"
@@ -89,31 +89,8 @@ export const Header = () => {
             />
           </Link>
 
-          <div className="flex items-center gap-4">
-            <Link href="tel:+1800121288800" className="flex items-center gap-2 text-white">
-              <Image
-                src="https://www.cuchd.in/includes/assets/images/header-footer/phone-icon.webp"
-                alt="Phone Icon"
-                width={20}
-                height={20}
-              />
-              <div className="flex flex-col">
-                <span className="text-xs">Admission Helpline</span>
-                <span className="text-sm font-semibold">1800121288800</span>
-              </div>
-            </Link>
-
-            <button aria-label="Search" className="text-white">
-              <span>Search</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navigation */}
-      <nav className="border-t border-[#ffffff33] py-1 relative z-20 bg-transparent">
-        <div className="cu-container flex items-center">
-          <div className="hidden lg:flex gap-6 text-white">
+          {/* Primary Navigation */}
+          <div className="hidden lg:flex gap-6 text-white ml-8">
             <Link href="https://www.cuchd.in/" className="nav-link py-1 flex items-center gap-1">
               Campuses
             </Link>
@@ -137,6 +114,40 @@ export const Header = () => {
                     <Link href="/about/" className="mega-menu-link block mb-1">Overview</Link>
                     <Link href="/about/our-identity.php" className="mega-menu-link block mb-1">Our Identity</Link>
                     <Link href="/about/vision-and-mission.php" className="mega-menu-link block mb-1">Vision & Mission</Link>
+                  </div>
+                </div>
+              )}
+            </div>
+            <Link href="/international/index.php" className="nav-link py-2">International</Link>
+            <Link href="/student-services/libraries.php" className="nav-link py-2">Library</Link>
+            <Link href="/student-services/" className="nav-link py-2">Student Services</Link>
+            <Link href="/jobs/" className="nav-link py-2">Career</Link>
+            <Link href="/blogs/" className="nav-link py-2">Blogs</Link>
+            <Link href="/contact/index.php" className="nav-link py-2">Contact Us</Link>
+          </div>
+
+          <div className="ml-auto flex items-center gap-4">
+          <div className="flex items-center gap-4">
+            <Link href="tel:+1800121288800" className="flex items-center gap-2 text-white">
+              <Image
+                src="https://www.cuchd.in/includes/assets/images/header-footer/phone-icon.webp"
+                alt="Phone Icon"
+                width={20}
+                height={20}
+              />
+              <div className="flex flex-col">
+                <span className="text-xs">Admission Helpline</span>
+                <span className="text-sm font-semibold">1800121288800</span>
+              </div>
+            </Link>
+
+            <button aria-label="Search" className="text-white">
+              <span>Search</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
                     <Link href="/about/LeaderShip.php" className="mega-menu-link block mb-1">LeaderShip</Link>
                     <Link href="/core-values/" className="mega-menu-link block mb-1">Core Values</Link>
                     <Link href="/recognitions-and-approvals/" className="mega-menu-link block mb-1">Recognition & Approvals</Link>
@@ -176,24 +187,6 @@ export const Header = () => {
                         <span className="text-sm text-gray-700 mt-2">Giving</span>
                       </div>
                     </div>
-                  </div>
-                </div>
-              )}
-            </div>
-            <Link href="/international/index.php" className="nav-link py-2">International</Link>
-            <Link href="/student-services/libraries.php" className="nav-link py-2">Library</Link>
-            <Link href="/student-services/" className="nav-link py-2">Student Services</Link>
-            <Link href="/jobs/" className="nav-link py-2">Career</Link>
-            <Link href="/blogs/" className="nav-link py-2">Blogs</Link>
-            <Link href="/contact/index.php" className="nav-link py-2">Contact Us</Link>
-          </div>
-
-          {/* Mobile menu button */}
-          <button className="lg:hidden text-white p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          </button>
-        </div>
-      </nav>
       </div>
     </header>
   )
