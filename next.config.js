@@ -1,3 +1,9 @@
+/**
+ * @file next.config.js
+ * @description Next.js configuration file for VB Entreprise project
+ * @author VB Entreprise
+ */
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
