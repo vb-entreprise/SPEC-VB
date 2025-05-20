@@ -3,12 +3,14 @@ import Image from "next/image"
 
 export const SecondaryMenu = () => {
   const [scrolled, setScrolled] = useState(false)
+  const [visible, setVisible] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 80)
+      setVisible(window.scrollY > 0)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -47,13 +49,15 @@ export const SecondaryMenu = () => {
   return (
     <nav
       className={`w-full flex justify-center fixed z-30 pointer-events-auto transition-all duration-300 ${
-        scrolled ? "top-[60px] bg-[#0b578a] shadow-lg" : "top-[180px] bg-transparent"
+        scrolled ? "top-[60px] bg-[#0b578a] shadow-lg" : "top-[180px]"
+      } ${
+        visible ? "opacity-100" : "opacity-0"
       }`}
     >
       <div
         ref={menuRef}
         className={`cu-container mx-auto flex justify-center items-center py-2 px-4 transition-all duration-300 ${
-          scrolled ? 'py-1' : 'bg-[#0b578a]/20 backdrop-blur-sm rounded-lg'
+          scrolled ? 'py-1' : 'bg-[#0b578a]/20 backdrop-blur-sm rounded-lg opacity-0'
         }`}
       >
         {/* Desktop Menu */}
