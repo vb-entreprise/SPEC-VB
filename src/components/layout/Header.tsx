@@ -84,7 +84,7 @@ export const Header = () => {
 
         {/* Main Header */}
         <div className={`relative transition-all duration-300 ${
-          scrolled ? 'py-2' : 'py-3'
+          scrolled ? 'py-2' : 'py-2'
         }`}>
           <div className="cu-container flex items-center justify-between relative z-10">
             <Link href="/" className="z-10">

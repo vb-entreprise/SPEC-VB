@@ -48,14 +48,14 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className="w-full fixed top-[140px] left-0 z-30"
+      className="w-full fixed top-[120px] left-0 z-30"
     >
       <div
         ref={menuRef}
         className="w-full"
       >
-        <div className="max-w-[1000px] mx-auto">
-          <div className="hidden lg:flex justify-center items-center py-2 px-8 bg-[#0b578a]/20 backdrop-blur-sm rounded-lg">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="hidden lg:flex justify-center items-center py-2 px-12 bg-[#0b578a]/20 backdrop-blur-sm rounded-lg">
             {menuItems.map((item) => (
               <div className="relative group" key={item}>
                 <button className="px-4 py-2 flex items-center gap-1 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors">
