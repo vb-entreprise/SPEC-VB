@@ -124,7 +124,7 @@ export const Header = () => {
       }`}>
         <div className="cu-container flex items-center">
           <div className="hidden lg:flex gap-6 text-white">
-            <Link href="https://www.cuchd.in/" className="nav-link py-2 flex items-center gap-1">
+            <Link href="https://www.cuchd.in/" className="nav-link py-1 flex items-center gap-1">
               Campuses
             </Link>
             <div className="relative group"
@@ -132,7 +132,7 @@ export const Header = () => {
               onMouseLeave={() => setActiveMenu(null)}
             >
               <button
-                className="nav-link py-2 flex items-center gap-1"
+                className="nav-link py-1 flex items-center gap-1"
                 aria-haspopup="true"
                 aria-expanded={activeMenu === "about"}
                 type="button"
