@@ -22,7 +22,7 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className="w-full absolute top-0 left-0 z-50">
+    <header className="w-full absolute top-0 left-0 z-50 bg-gradient-to-b from-black/70 to-transparent">
       <div className="relative z-10">
       {/* Top Announcement Bar */}
       <div className="announcement-bar overflow-hidden relative py-2">
@@ -76,7 +76,7 @@ export const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="relative bg-transparent">
+      <div className="relative">
         <div className="cu-container flex justify-between items-center py-3 relative z-10">
           <Link href="/" className="z-10">
             <Image
@@ -84,7 +84,7 @@ export const Header = () => {
               alt="SPEC Institutes Logo"
               width={180}
               height={60}
-              className="w-auto h-[45px]"
+              className="w-auto h-[40px]"
               priority
             />
           </Link>

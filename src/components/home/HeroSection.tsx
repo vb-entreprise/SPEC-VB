@@ -8,14 +8,14 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 export const HeroSection = () => {
   return (
-    <section className="relative h-[600px] md:h-[600px] overflow-hidden mt-[180px]">
+    <section className="relative h-[600px] md:h-[600px] overflow-hidden mt-[160px]">
       {/* Background Image */}
       <Image
         src="https://scontent.famd1-3.fna.fbcdn.net/v/t39.30808-6/493010211_1114327887375128_6008420658468466788_n.png?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=16E5zJqzgtUQ7kNvwEZzbED&_nc_oc=AdlyUNMH9axOUy_zq74TU1AoblxqP09NYz4Tr7ui_wq_xdMA7e2NzrN8tK29ErVRlcvmecYy4OiO7oGBk6_0hZVB&_nc_zt=23&_nc_ht=scontent.famd1-3.fna&_nc_gid=LQKu8f7GV0vf2XTvGxAVSQ&oh=00_AfKM5eoFvu5R4spBWfGSh1zL7re4DWVV1yZs3sk6pfLdxQ&oe=682E12ED"
         alt="SPEC Institutes Background"
         fill
         priority
-        className="object-cover"
+        className="object-cover -mt-[160px]"
       />
 
       {/* Overlay */}
