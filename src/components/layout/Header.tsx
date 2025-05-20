@@ -22,10 +22,14 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className="w-full absolute top-0 left-0 z-50 bg-gradient-to-b from-black/70 to-transparent">
+    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-[#0b578a]' : 'bg-gradient-to-b from-black/70 to-transparent'
+    }`}>
       <div className="relative z-10">
         {/* Top Announcement Bar */}
-        <div className="announcement-bar overflow-hidden relative py-2">
+        <div className={`announcement-bar overflow-hidden relative py-2 transition-all duration-300 ${
+          scrolled ? 'h-0 opacity-0' : 'h-auto opacity-100'
+        }`}>
           <div className="animate-marquee inline-block">
             Register Now for CU Joint Campus Placement Programme <Link href="https://www.cuchd.in/placements/frmRegistration.aspx?Type=jpp2019" className="underline ml-1">Register Now</Link>
             <span className="mx-3">|</span>
@@ -36,7 +40,9 @@ export const Header = () => {
         </div>
 
         {/* Top Secondary Bar */}
-        <div className="text-white py-2 px-4 bg-transparent">
+        <div className={`text-white py-2 px-4 bg-transparent transition-all duration-300 ${
+          scrolled ? 'h-0 opacity-0 overflow-hidden' : 'h-auto opacity-100'
+        }`}>
           <div className="cu-container flex justify-between items-center">
             {/* Left Links */}
             <div className="flex gap-4 text-sm">
@@ -76,7 +82,9 @@ export const Header = () => {
         </div>
 
         {/* Main Header */}
-        <div className="relative">
+        <div className={`relative transition-all duration-300 ${
+          scrolled ? 'py-2' : 'py-3'
+        }`}>
           <div className="cu-container flex items-center py-3 relative z-10">
             <Link href="/" className="z-10">
               <Image
