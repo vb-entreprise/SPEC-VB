@@ -54,7 +54,7 @@ export const SecondaryMenu = () => {
         ref={menuRef}
         className="cu-container flex justify-center items-center max-w-4xl w-[75%] py-2 px-6"
         style={{
-          background: scrolled ? 'rgba(40,60,90,0.95)' : 'rgba(40,60,90,0.2)',
+          background: scrolled ? 'rgba(11,87,138,0.95)' : 'rgba(11,87,138,0.2)',
           borderRadius: '18px',
           backdropFilter: 'blur(5px) contrast(80%)',
           WebkitBackdropFilter: 'blur(5px) contrast(80%)',
@@ -116,11 +116,11 @@ export const SecondaryMenu = () => {
               <div className="px-6 py-4 border-b border-gray-200">
                 <div className="text-xs font-bold text-gray-700 mb-2 tracking-widest">CAMPUSES</div>
                 <div className="flex gap-6 items-center">
-                  <a href="https://www.cuchd.in/" className="flex flex-col items-center text-xs font-semibold text-gray-700 hover:text-[#a9473b]">
+                  <a href="https://www.cuchd.in/" className="flex flex-col items-center text-xs font-semibold text-gray-700 hover:text-[#c40c12]">
                     <Image src="https://ext.same-assets.com/1087074623/507068166.webp" alt="Punjab Campus" width={40} height={40} />
                     <span className="mt-1">PUNJAB CAMPUS</span>
                   </a>
-                  <a href="http://www.culko.in/" className="flex flex-col items-center text-xs font-semibold text-gray-700 hover:text-[#a9473b]">
+                  <a href="http://www.culko.in/" className="flex flex-col items-center text-xs font-semibold text-gray-700 hover:text-[#c40c12]">
                     <Image src="https://ext.same-assets.com/1087074623/1463931019.webp" alt="Uttar Pradesh Campus" width={40} height={40} />
                     <span className="mt-1">UTTAR PRADESH CAMPUS</span>
                   </a>

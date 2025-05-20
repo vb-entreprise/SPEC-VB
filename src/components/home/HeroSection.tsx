@@ -32,7 +32,7 @@ export const HeroSection = () => {
           </p>
 
           {/* CUCET Countdown Timer */}
-          <div className="mt-6 bg-[#a9473b]/90 p-4 rounded-md">
+          <div className="mt-6 bg-[#c40c12]/90 p-4 rounded-md">
             <p className="text-white font-medium mb-2">CUCET Scholarship registrations closing on 15th May 2025</p>
             <div className="flex gap-4 mb-3">
               <div className="bg-white rounded-md text-black p-2 text-center w-16">
@@ -53,7 +53,7 @@ export const HeroSection = () => {
               </div>
             </div>
             <Link href="https://cucet.cuchd.in/index.aspx?utm_source=Website&utm_medium=cuchd">
-              <Button className="bg-white hover:bg-gray-100 text-[#a9473b] border-none font-semibold">
+              <Button className="bg-white hover:bg-gray-100 text-[#c40c12] border-none font-semibold">
                 Apply Now !
               </Button>
             </Link>
@@ -62,7 +62,7 @@ export const HeroSection = () => {
 
         {/* Login Form Card */}
         <Card className="w-full max-w-sm bg-white shadow-lg">
-          <CardHeader className="bg-[#a9473b] text-white text-center py-3">
+          <CardHeader className="bg-[#c40c12] text-white text-center py-3">
             <h2 className="text-lg font-semibold">CHANDIGARH UNIVERSITY LOGIN</h2>
           </CardHeader>
           <CardContent className="pt-6">
@@ -72,7 +72,7 @@ export const HeroSection = () => {
                 <input
                   type="text"
                   id="username"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#1f425c]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0b578a]"
                   placeholder="Enter Username"
                 />
               </div>
@@ -82,7 +82,7 @@ export const HeroSection = () => {
                 <input
                   type="password"
                   id="password"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#1f425c]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0b578a]"
                   placeholder="Enter Password"
                 />
               </div>
@@ -91,7 +91,7 @@ export const HeroSection = () => {
                 <label htmlFor="loginType" className="block text-sm font-medium text-gray-700 mb-1">Login Type</label>
                 <select
                   id="loginType"
-                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#1f425c]"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-[#0b578a]"
                 >
                   <option value="">Select Login Type</option>
                   <option value="student">Student</option>
@@ -103,12 +103,12 @@ export const HeroSection = () => {
             </form>
           </CardContent>
           <CardFooter className="flex-col gap-3">
-            <Button className="w-full bg-[#a9473b] hover:bg-[#863a31] text-white">
+            <Button className="w-full bg-[#c40c12] hover:bg-[#a30a0f] text-white">
               Login
             </Button>
 
             <div className="text-center w-full text-sm">
-              <a href="#" className="text-[#1f425c] hover:underline">Forgot Password?</a>
+              <a href="#" className="text-[#0b578a] hover:underline">Forgot Password?</a>
             </div>
           </CardFooter>
         </Card>
