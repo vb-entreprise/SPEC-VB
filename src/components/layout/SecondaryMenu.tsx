@@ -48,17 +48,17 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className="w-full fixed top-[180px] left-0 z-30 bg-[#0b578a]/0"
+      className="w-full fixed top-[180px] left-0 z-30"
     >
       <div
         ref={menuRef}
-        className="w-full bg-[#0b578a]/90"
+        className="w-full bg-[#0b578a]/20 backdrop-blur-sm"
       >
         <div className="cu-container mx-auto">
-          <div className="hidden lg:flex justify-center items-center py-3">
+          <div className="hidden lg:flex justify-center items-center py-2">
             {menuItems.map((item) => (
               <div className="relative group" key={item}>
-                <button className="px-6 py-2 flex items-center gap-2 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors">
+                <button className="px-4 py-2 flex items-center gap-1 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors">
                   {item}
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                 </button>
