@@ -11,15 +11,15 @@ export const HeroSection = () => {
     <section className="relative h-[600px] md:h-[600px] overflow-hidden mt-[160px]">
       {/* Background Image */}
       <Image
-        src="https://scontent.famd1-3.fna.fbcdn.net/v/t39.30808-6/493010211_1114327887375128_6008420658468466788_n.png?_nc_cat=106&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=16E5zJqzgtUQ7kNvwEZzbED&_nc_oc=AdlyUNMH9axOUy_zq74TU1AoblxqP09NYz4Tr7ui_wq_xdMA7e2NzrN8tK29ErVRlcvmecYy4OiO7oGBk6_0hZVB&_nc_zt=23&_nc_ht=scontent.famd1-3.fna&_nc_gid=LQKu8f7GV0vf2XTvGxAVSQ&oh=00_AfKM5eoFvu5R4spBWfGSh1zL7re4DWVV1yZs3sk6pfLdxQ&oe=682E12ED"
+        src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=80"
         alt="SPEC Institutes Background"
         fill
         priority
-        className="object-cover -mt-[160px]"
+        className="object-cover -mt-[160px] brightness-75"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
 
       <div className="cu-container relative h-full flex items-center justify-between z-10">
         {/* Left Content - Visible on larger screens */}
