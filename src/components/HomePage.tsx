@@ -4,6 +4,7 @@ import React from "react"
 import { Header } from "@/components/layout/Header"
 import { Footer } from "@/components/layout/Footer"
 import { HeroSection } from "@/components/home/HeroSection"
+import { RankingBanner } from "@/components/home/RankingBanner"
 import { StatsSection } from "@/components/home/StatsSection"
 import { RankingsSection } from "@/components/home/RankingsSection"
 import { ProgramsSection } from "@/components/home/ProgramsSection"
@@ -16,6 +17,7 @@ export default function HomePage() {
       <Header />
       <main className="flex-1 relative">
         <HeroSection />
+        <RankingBanner />
         <StatsSection />
         <RankingsSection />
         <ProgramsSection />
