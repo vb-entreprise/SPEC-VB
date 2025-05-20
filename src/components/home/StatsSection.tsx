@@ -57,20 +57,20 @@ export const StatsSection = () => {
         </div>
 
         <div className="grid grid-cols-5 gap-4 mt-12">
-          <div className="relative aspect-video">
+          <div className="relative aspect-video group cursor-pointer">
             <Image
-              src="https://ext.same-assets.com/2241434697/1342323975.webp"
+              src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg"
               alt="Campus Life"
               fill
               className="object-cover rounded-lg"
             />
-            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
           <div className="relative aspect-video">
             <Image
-              src="https://ext.same-assets.com/2241434697/1431232457.webp"
+              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg"
               alt="Sports"
               fill
               className="object-cover rounded-lg"
@@ -78,7 +78,7 @@ export const StatsSection = () => {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="https://ext.same-assets.com/2241434697/3214124125.webp"
+              src="https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg"
               alt="Events"
               fill
               className="object-cover rounded-lg"
@@ -86,7 +86,7 @@ export const StatsSection = () => {
           </div>
           <div className="relative aspect-video">
             <Image
-              src="https://ext.same-assets.com/2241434697/3786175421.webp"
+              src="https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg"
               alt="Research"
               fill
               className="object-cover rounded-lg"
