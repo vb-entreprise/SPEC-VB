@@ -24,81 +24,80 @@ const StatCard = ({ number, title, subtitle }: StatProps) => {
 
 export const StatsSection = () => {
   return (
-    <section className="py-12 bg-[#0b578a] text-white">
+    <section className="py-8 bg-[#0b578a] text-white">
       <div className="cu-container">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-6">An Illustrious Legacy we continue to Shape</h1>
-          <div className="grid grid-cols-5 gap-8 text-center">
+        <h2 className="text-center text-3xl font-semibold mb-8">An Illustrious Legacy we continue to Shape</h2>
+        
+        <div className="grid grid-cols-5 gap-8 items-center justify-center text-center">
+          <div className="flex flex-col items-center">
+            <span className="text-4xl font-bold mb-1">154+</span>
+            <span className="text-sm uppercase">Programs</span>
+            <span className="text-xs mt-1">Industry Oriented Academic Programs</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-4xl font-bold mb-1">980+</span>
+            <span className="text-sm uppercase">Students</span>
+            <span className="text-xs mt-1">Top-Tier Mentorship</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-4xl font-bold mb-1">1350+</span>
+            <span className="text-sm uppercase">Faculty</span>
+            <span className="text-xs mt-1">Dedicated Faculty</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-4xl font-bold mb-1">300+</span>
+            <span className="text-sm uppercase">Faculty</span>
+            <span className="text-xs mt-1">Renowned Faculty</span>
+          </div>
+          <div className="flex flex-col items-center">
+            <span className="text-4xl font-bold mb-1">100000+</span>
+            <span className="text-sm uppercase">Alumni</span>
+            <span className="text-xs mt-1">Accomplished Alumni Across the Globe</span>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-5 gap-4 mt-12">
+          <div className="relative aspect-video">
             <Image
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
-              alt="Stats"
-              width={200}
-              height={100}
-              className="mx-auto mb-4"
+              src="https://ext.same-assets.com/2241434697/1342323975.webp"
+              alt="Campus Life"
+              fill
+              className="object-cover rounded-lg"
             />
-            <div>
-              <h2 className="text-5xl font-bold mb-2">154+</h2>
-              <p className="text-sm">Research Papers</p>
-            </div>
-            <div>
-              <h2 className="text-5xl font-bold mb-2">980+</h2>
-              <p className="text-sm">Faculty Members</p>
-            </div>
-            <div>
-              <h2 className="text-5xl font-bold mb-2">1350+</h2>
-              <p className="text-sm">Students</p>
-            </div>
-            <div>
-              <h2 className="text-5xl font-bold mb-2">100000+</h2>
-              <p className="text-sm">Alumni Network</p>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
             </div>
           </div>
-        </div>
-
-        {/* News Cards */}
-        <div className="grid grid-cols-4 gap-6 mb-12">
-          <div className="bg-white rounded-lg overflow-hidden">
+          <div className="relative aspect-video">
             <Image
-              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
-              alt="News 1"
-              width={300}
-              height={200}
-              className="w-full h-48 object-cover"
+              src="https://ext.same-assets.com/2241434697/1431232457.webp"
+              alt="Sports"
+              fill
+              className="object-cover rounded-lg"
             />
-            <div className="p-4">
-              <h3 className="text-[#0b578a] font-bold mb-2">Latest News</h3>
-              <p className="text-gray-600 text-sm">Read more about our latest achievements</p>
-            </div>
           </div>
-          {/* Repeat for other cards */}
-        </div>
-
-        {/* Rankings Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl font-bold mb-8">Proudly Distinguished by Our Prestigious Rankings and Recognitions</h2>
-          <div className="grid grid-cols-7 gap-4">
-            {/* Add ranking badges here */}
+          <div className="relative aspect-video">
+            <Image
+              src="https://ext.same-assets.com/2241434697/3214124125.webp"
+              alt="Events"
+              fill
+              className="object-cover rounded-lg"
+            />
           </div>
-        </div>
-
-        {/* Placements Overview */}
-        <div className="text-center">
-          <h2 className="text-2xl font-bold mb-8">Placements Overview</h2>
-          <div className="grid grid-cols-2 gap-8">
-            <div className="bg-white rounded-lg p-6">
-              <Image
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
-                alt="Placement Stats"
-                width={400}
-                height={300}
-                className="mx-auto mb-4"
-              />
-              <div className="text-[#0b578a]">
-                <h3 className="text-xl font-bold">54.75 LPA</h3>
-                <p>Highest Package</p>
-              </div>
-            </div>
-            {/* Repeat for other placement stats */}
+          <div className="relative aspect-video">
+            <Image
+              src="https://ext.same-assets.com/2241434697/3786175421.webp"
+              alt="Research"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
+          <div className="bg-white text-black p-4 rounded-lg">
+            <h3 className="font-semibold mb-2">UPCOMING EVENTS</h3>
+            <p className="text-sm">1st International Conference on Building Urban Infrastructure with Leading Design Innovations (BUILD- 2025)</p>
+            <button className="mt-4 bg-[#c40c12] text-white text-sm px-4 py-1 rounded">
+              REGISTER NOW
+            </button>
           </div>
         </div>
       </div>
