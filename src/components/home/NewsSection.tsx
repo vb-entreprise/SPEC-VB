@@ -6,6 +6,10 @@ import Image from "next/image"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
+/**
+ * @author VB Entreprise
+ * @description NewsCard component for displaying individual news items
+ */
 const NewsCard = ({
   image,
   title,
@@ -51,6 +55,10 @@ const NewsCard = ({
   )
 }
 
+/**
+ * @author VB Entreprise
+ * @description NewsSection component displaying latest news and updates
+ */
 export const NewsSection = () => {
   return (
     <section className="py-16 bg-gray-50">
@@ -75,41 +83,39 @@ export const NewsSection = () => {
               </Button>
             </div>
           </div>
-          {/* Repeat for other news cards */}
         </div>
 
-          <h2 className="text-2xl font-semibold text-center mb-6">
-            Pioneering Research
-          </h2>
-          <p className="text-center mb-8 max-w-2xl mx-auto">
-            Innovation and discovery are at the heart of our approach to education and development.
-          </p>
+        <h2 className="text-2xl font-semibold text-center mb-6">
+          Pioneering Research
+        </h2>
+        <p className="text-center mb-8 max-w-2xl mx-auto">
+          Innovation and discovery are at the heart of our approach to education and development.
+        </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-6">
-            <div className="text-center">
-              <span className="block text-3xl font-bold">5000+</span>
-              <span className="text-sm">RESEARCH PAPERS</span>
-            </div>
-            <div className="text-center">
-              <span className="block text-3xl font-bold">650+</span>
-              <span className="text-sm">PATENTS FILED</span>
-            </div>
-            <div className="text-center">
-              <span className="block text-3xl font-bold">500+</span>
-              <span className="text-sm">FUNDED PROJECTS</span>
-            </div>
-            <div className="text-center">
-              <span className="block text-3xl font-bold">14+</span>
-              <span className="text-sm">RESEARCH CENTERS</span>
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-6">
+          <div className="text-center">
+            <span className="block text-3xl font-bold">5000+</span>
+            <span className="text-sm">RESEARCH PAPERS</span>
           </div>
+          <div className="text-center">
+            <span className="block text-3xl font-bold">650+</span>
+            <span className="text-sm">PATENTS FILED</span>
+          </div>
+          <div className="text-center">
+            <span className="block text-3xl font-bold">500+</span>
+            <span className="text-sm">FUNDED PROJECTS</span>
+          </div>
+          <div className="text-center">
+            <span className="block text-3xl font-bold">14+</span>
+            <span className="text-sm">RESEARCH CENTERS</span>
+          </div>
+        </div>
 
-          <div className="flex flex-wrap justify-center gap-4">
-            <Image src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Research Lab" width={270} height={150} className="rounded-md" />
-            <Image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Research Center" width={270} height={150} className="rounded-md" />
-            <Image src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Innovation Hub" width={270} height={150} className="rounded-md" />
-            <Image src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?auto=format&fit=crop&w=400&q=80" alt="Research Equipment" width={270} height={150} className="rounded-md" />
-          </div>
+        <div className="flex flex-wrap justify-center gap-4">
+          <Image src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Research Lab" width={270} height={150} className="rounded-md" />
+          <Image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Research Center" width={270} height={150} className="rounded-md" />
+          <Image src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Innovation Hub" width={270} height={150} className="rounded-md" />
+          <Image src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?auto=format&fit=crop&w=400&q=80" alt="Research Equipment" width={270} height={150} className="rounded-md" />
         </div>
 
         {/* News and Events Section */}
@@ -158,6 +164,12 @@ export const NewsSection = () => {
             <Image
               src="https://ext.same-assets.com/2241434697/3786175421.webp"
               alt="Chandigarh University Campus"
+              fill
+              className="object-cover"
+            />
+          </div>
+        </div>
+
         {/* Student Testimonials */}
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-[#0b578a] text-center mb-12">Students Speak</h2>
@@ -179,11 +191,9 @@ export const NewsSection = () => {
                 </div>
               </div>
             </div>
-            {/* Repeat for other testimonials */}
           </div>
         </div>
       </div>
     </section>
-  )
   )
 }

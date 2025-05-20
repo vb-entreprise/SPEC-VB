@@ -6,6 +6,10 @@ import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
+/**
+ * @author VB Entreprise
+ * @description ProgramCard component for displaying individual academic programs
+ */
 type ProgramCardProps = {
   title: string
   icon: string
@@ -33,6 +37,10 @@ const ProgramCard = ({ title, icon, link }: ProgramCardProps) => {
   )
 }
 
+/**
+ * @author VB Entreprise
+ * @description FeatureCard component for displaying university features
+ */
 type FeatureCardProps = {
   icon: React.ReactNode
   title: string
@@ -51,6 +59,10 @@ const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
   )
 }
 
+/**
+ * @author VB Entreprise
+ * @description ProgramsSection component displaying academic programs and features
+ */
 export const ProgramsSection = () => {
   return (
     <section className="py-16 bg-white">
@@ -71,7 +83,6 @@ export const ProgramsSection = () => {
               <h3 className="text-xl font-semibold mb-3 text-[#0b578a]">Global Recognition</h3>
               <p className="text-gray-600">Ranked among World's Top 231 Universities</p>
             </div>
-            {/* Repeat for other features */}
           </div>
         </div>
 
@@ -79,53 +90,47 @@ export const ProgramsSection = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-[#0b578a] text-center mb-8">Our Programs</h2>
           <div className="grid grid-cols-4 gap-6">
-            <Image
-              src="/images/programs/engineering.jpg"
-              alt="Engineering"
-              width={300}
-              height={200}
-              className="w-full rounded-lg"
+            <ProgramCard
+              title="Engineering (B.Tech/M.Tech)"
+              icon="/images/icons/engineering.svg"
+              link="/engineering/"
             />
-            {/* Repeat for other programs */}
+            <ProgramCard
+              title="Management (BBA/MBA)"
+              icon="/images/icons/management.svg"
+              link="/management/"
+            />
+            <ProgramCard
+              title="Computing (BCA/MCA)"
+              icon="/images/icons/computing.svg"
+              link="/computing/"
+            />
+            <ProgramCard
+              title="Architecture"
+              icon="/images/icons/architecture.svg"
+              link="/architecture-and-design/"
+            />
+            <ProgramCard
+              title="Law"
+              icon="/images/icons/law.svg"
+              link="/legal-studies/"
+            />
+            <ProgramCard
+              title="Media Studies"
+              icon="/images/icons/media.svg"
+              link="/journalism-and-mass-communication/"
+            />
+            <ProgramCard
+              title="Hospitality"
+              icon="/images/icons/hotel.svg"
+              link="/hotel-management-and-tourism/"
+            />
+            <ProgramCard
+              title="Pharma Sciences"
+              icon="/images/icons/pharma.svg"
+              link="/pharma-sciences/"
+            />
           </div>
-        </div>
-
-          />
-          <ProgramCard
-            title="Management (BBA/MBA)"
-            icon="/images/icons/management.svg"
-            link="/management/"
-          />
-          <ProgramCard
-            title="Computing (BCA/MCA)"
-            icon="/images/icons/computing.svg"
-            link="/computing/"
-          />
-          <ProgramCard
-            title="Architecture"
-            icon="/images/icons/architecture.svg"
-            link="/architecture-and-design/"
-          />
-          <ProgramCard
-            title="Law"
-            icon="/images/icons/law.svg"
-            link="/legal-studies/"
-          />
-          <ProgramCard
-            title="Media Studies"
-            icon="/images/icons/media.svg"
-            link="/journalism-and-mass-communication/"
-          />
-          <ProgramCard
-            title="Hospitality"
-            icon="/images/icons/hotel.svg"
-            link="/hotel-management-and-tourism/"
-          />
-          <ProgramCard
-            title="Pharma Sciences"
-            icon="/images/icons/pharma.svg"
-            link="/pharma-sciences/"
-          />
         </div>
 
         <div className="flex justify-center mt-6 mb-16">
@@ -188,6 +193,10 @@ export const ProgramsSection = () => {
               }
               title="Research Excellence"
               description="A research-driven institution with 6500+ publications and 143 patents."
+            />
+          </div>
+        </div>
+
         {/* Research Section */}
         <div className="text-center">
           <h2 className="text-3xl font-bold text-[#0b578a] mb-8">Pioneering Research</h2>
@@ -196,11 +205,9 @@ export const ProgramsSection = () => {
               <h3 className="text-4xl font-bold mb-2">5000+</h3>
               <p>Research Papers</p>
             </div>
-            {/* Repeat for other research stats */}
           </div>
         </div>
       </div>
     </section>
-  )
   )
 }
