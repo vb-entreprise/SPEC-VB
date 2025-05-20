@@ -99,8 +99,8 @@ export const Header = () => {
             </Link>
 
             {/* Primary Navigation */}
-            <div className="flex-1">
-            <div className="hidden lg:flex gap-6 text-white ml-8">
+            <div className="flex-1 flex justify-center">
+            <div className="hidden lg:flex gap-8 text-white">
               <Link href="/student-services/libraries.php" className="nav-link py-2">Library</Link>
               <Link href="/student-services/" className="nav-link py-2">Student Services</Link>
               <Link href="/jobs/" className="nav-link py-2">Career</Link>
@@ -109,7 +109,7 @@ export const Header = () => {
             </div>
             </div>
 
-            <div className="ml-auto flex items-center gap-4">
+            <div className="flex items-center gap-4">
               <div className="flex items-center gap-4">
                 <Link href="tel:+1800121288800" className="flex items-center gap-2 text-white">
                   <Image
