@@ -8,18 +8,18 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 
 export const HeroSection = () => {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden pt-[240px]">
       {/* Background Image */}
       <Image
         src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=2000&q=80"
         alt="SPEC Institutes Background"
         fill
         priority
-        className="object-cover"
+        className="object-cover fixed top-0 left-0 -z-10"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="fixed inset-0 bg-black/60 -z-10"></div>
 
       <div className="cu-container relative h-full flex items-center justify-between z-10">
         {/* Left Content - Visible on larger screens */}
@@ -61,7 +61,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Login Form Card */}
-        <Card className="w-full max-w-sm bg-white shadow-lg absolute right-4 top-1/2 transform -translate-y-1/2">
+        <Card className="w-full max-w-sm bg-white shadow-lg">
           <CardHeader className="bg-[#a9473b] text-white text-center py-3">
             <h2 className="text-lg font-semibold">CHANDIGARH UNIVERSITY LOGIN</h2>
           </CardHeader>
