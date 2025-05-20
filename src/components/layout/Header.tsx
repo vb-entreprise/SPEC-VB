@@ -8,28 +8,25 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
+  const [isAtTop, setIsAtTop] = useState(true)
 
   const handleMenuToggle = (menuName: string) => {
     setActiveMenu(activeMenu === menuName ? null : menuName)
   }
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 60)
+    const handleScroll = () => { 
+      setScrolled(window.scrollY > 100)
+      setIsAtTop(window.scrollY < 50)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <header className="w-full relative">
-      {/* Glassmorphism background for the whole header */}
-      <div className="absolute inset-0 w-full h-full z-0" style={{
-        background: '#1f425c',
-        backdropFilter: 'none',
-        WebkitBackdropFilter: 'none',
-        transition: 'background 0.3s',
-      }} />
+    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+      scrolled ? "bg-[#1f425c] shadow-lg" : "bg-transparent"
+    }`}>
       <div className="relative z-10">
       {/* Top Announcement Bar */}
       <div className="announcement-bar overflow-hidden relative">
@@ -43,7 +40,9 @@ export const Header = () => {
       </div>
 
       {/* Top Secondary Bar */}
-      <div className="bg-[#1f425c] text-white py-2 px-4">
+      <div className={`text-white py-2 px-4 transition-all duration-300 ${
+        scrolled ? "bg-[#1f425c]/95" : "bg-transparent backdrop-blur-sm"
+      }`}>
         <div className="cu-container flex justify-between items-center">
           {/* Left Links */}
           <div className="flex gap-4 text-sm">
@@ -83,13 +82,9 @@ export const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className="relative">
-        <div className="absolute inset-0 w-full h-full z-0" style={{
-          background: '#1f425c',
-          backdropFilter: 'none',
-          WebkitBackdropFilter: 'none',
-          transition: 'background 0.3s',
-        }} />
+      <div className={`relative transition-all duration-300 ${
+        scrolled ? "bg-[#1f425c]/95" : "bg-transparent backdrop-blur-sm"
+      }`}>
         <div className="cu-container flex justify-between items-center py-3 relative z-10">
           <Link href="/" className="z-10">
             <Image
@@ -123,7 +118,9 @@ export const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="bg-[#1f425c] border-t border-[#ffffff33] py-1 relative z-20">
+      <nav className={`border-t border-[#ffffff33] py-1 relative z-20 transition-all duration-300 ${
+        scrolled ? "bg-[#1f425c]/95" : "bg-transparent backdrop-blur-sm"
+      }`}>
         <div className="cu-container flex items-center">
           <div className="hidden lg:flex gap-6 text-white">
             <Link href="https://www.cuchd.in/" className="nav-link py-2 flex items-center gap-1">
