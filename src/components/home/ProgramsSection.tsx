@@ -66,7 +66,7 @@ const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
 export const ProgramsSection = () => {
   return (
     <section className="py-16 bg-white">
-      <div className="cu-container">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#0b578a] mb-6">Why Should You Choose Chandigarh University?</h2>
           
