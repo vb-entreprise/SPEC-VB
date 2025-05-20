@@ -185,4 +185,5 @@ export const NewsSection = () => {
       </div>
     </section>
   )
+  )
 }
