@@ -37,6 +37,11 @@ const nextConfig = {
         hostname: "www.cuchd.in",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+        pathname: "/**",
+      }
     ],
   },
   typescript: {
