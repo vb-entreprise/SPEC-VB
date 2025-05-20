@@ -89,9 +89,10 @@ export const Header = () => {
           <Link href="/" className="z-10">
             <Image
               src="https://spec.edu.in//images/Colleges_Logo/EMBOSS-LOGO-SPEC-INSTITUTES.png"
-              alt="SPEC Institutes"
-              width={60}
-              height={18}
+              alt="SPEC Institutes Logo"
+              width={180}
+              height={60}
+              className="w-auto h-[60px]"
               priority
             />
           </Link>

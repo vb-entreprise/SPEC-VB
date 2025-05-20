@@ -3,21 +3,16 @@ import Image from "next/image"
 
 export const SecondaryMenu = () => {
   const [scrolled, setScrolled] = useState(false)
-  const [heroHeight, setHeroHeight] = useState(0)
   const [mobileOpen, setMobileOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Get hero section height
-    const hero = document.querySelector("section.relative")
-    if (hero) setHeroHeight(hero.getBoundingClientRect().height)
-
     const handleScroll = () => {
-      setScrolled(window.scrollY > heroHeight - 60)
+      setScrolled(window.scrollY > 100)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [heroHeight])
+  }, [])
 
   // Close mobile menu on scroll or resize
   useEffect(() => {
@@ -51,15 +46,13 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className={`w-full flex justify-center bg-transparent ${scrolled ? "fixed top-0" : "absolute top-8"} left-1/2 z-30 -translate-x-1/2 pointer-events-auto transition-all duration-300`}
+      className={`w-full flex justify-center bg-transparent fixed top-[180px] left-1/2 z-30 -translate-x-1/2 pointer-events-auto transition-all duration-300`}
     >
       <div
         ref={menuRef}
         className="cu-container flex justify-center items-center max-w-3xl w-[65%] py-1 px-4"
         style={{
-          background: scrolled
-            ? 'rgba(40,60,90,0.95)'
-            : 'rgba(255,255,255,0.13)',
+          background: 'rgba(40,60,90,0.95)',
           borderRadius: '18px',
           backdropFilter: 'blur(5px) contrast(80%)',
           WebkitBackdropFilter: 'blur(5px) contrast(80%)',
