@@ -53,45 +53,31 @@ const NewsCard = ({
 
 export const NewsSection = () => {
   return (
-    <section className="py-12">
+    <section className="py-16 bg-gray-50">
       <div className="cu-container">
-        {/* Students Speak Section */}
-        <div className="mb-16">
-          <h2 className="text-[#1f425c] text-2xl font-semibold text-center mb-8">
-            Students Speak
-          </h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-            Success stories told by our students, for whom we've laid the foundation for a promising future.
-          </p>
+        <h2 className="text-3xl font-bold text-[#0b578a] text-center mb-12">Latest News & Updates</h2>
 
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <div className="flex flex-col md:flex-row gap-6">
-              <div className="md:w-1/3">
-                <Image
-                  src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=400&q=80"
-                  alt="Student Success"
-                  width={400}
-                  height={300}
-                  className="rounded-lg w-full h-auto"
-                />
-              </div>
-              <div className="md:w-2/3 flex flex-col justify-center">
-                <h3 className="text-xl font-semibold text-[#1f425c] mb-2">Punjabi Engineering Graduate</h3>
-                <p className="text-gray-700 mb-4">
-                  "As an alumnus of Chandigarh University, I am proud to say that my education has prepared me for success in the competitive world. The university's focus on practical learning and industry exposure helped me secure a great job right after graduation."
-                </p>
-                <Link href="/testimonials">
-                  <Button className="bg-[#a9473b] hover:bg-[#863a31] text-white self-start">
-                    Read More Testimonials
-                  </Button>
-                </Link>
-              </div>
+        <div className="grid grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg overflow-hidden shadow-sm">
+            <Image
+              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+              alt="News 1"
+              width={400}
+              height={250}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+              <span className="text-sm text-[#c40c12] font-semibold">Campus News</span>
+              <h3 className="text-xl font-bold text-[#0b578a] mt-2 mb-3">Latest Campus Updates</h3>
+              <p className="text-gray-600 mb-4">Stay updated with the latest happenings on campus</p>
+              <Button className="bg-[#0b578a] hover:bg-[#094468] text-white">
+                Read More
+              </Button>
             </div>
           </div>
+          {/* Repeat for other news cards */}
         </div>
 
-        {/* Research Section */}
-        <div className="bg-[#1f425c] text-white rounded-lg p-8 mb-16">
           <h2 className="text-2xl font-semibold text-center mb-6">
             Pioneering Research
           </h2>
@@ -172,16 +158,28 @@ export const NewsSection = () => {
             <Image
               src="https://ext.same-assets.com/2241434697/3786175421.webp"
               alt="Chandigarh University Campus"
-              fill
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <Link href="/maps/">
-                <Button className="bg-[#a9473b] hover:bg-[#863a31] text-white text-lg px-6 py-4">
-                  Take Virtual Tour
-                </Button>
-              </Link>
+        {/* Student Testimonials */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-[#0b578a] text-center mb-12">Students Speak</h2>
+          <div className="grid grid-cols-2 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="flex items-start gap-4">
+                <Image
+                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e"
+                  alt="Student"
+                  width={80}
+                  height={80}
+                  className="rounded-full"
+                />
+                <div>
+                  <h3 className="font-semibold text-[#0b578a]">John Doe</h3>
+                  <p className="text-gray-600 mt-2">
+                    "The university has provided me with excellent opportunities for growth"
+                  </p>
+                </div>
+              </div>
             </div>
+            {/* Repeat for other testimonials */}
           </div>
         </div>
       </div>

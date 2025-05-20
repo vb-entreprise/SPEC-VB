@@ -53,45 +53,43 @@ const FeatureCard = ({ icon, title, description }: FeatureCardProps) => {
 
 export const ProgramsSection = () => {
   return (
-    <section className="py-12">
+    <section className="py-16 bg-white">
       <div className="cu-container">
-        {/* International Students Section */}
-        <div className="bg-gray-50 p-8 rounded-lg mb-16">
-          <h2 className="text-[#1f425c] text-2xl font-semibold text-center mb-4">
-            Immerse yourself in a Global Educational Experience
-          </h2>
-          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-            with peers from 45 countries
-          </p>
-
-          <div className="relative">
-            <Image
-              src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80"
-              alt="International Students"
-              width={1200}
-              height={400}
-              className="rounded-lg w-full object-cover h-[300px]"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex flex-col items-center justify-center text-white">
-              <h3 className="text-2xl font-bold mb-3">STUDY WITH THE WORLD</h3>
-              <p className="mb-6">International Admissions Open for July 2025</p>
-              <Link href="https://www.cuchd.in/international/">
-                <Button className="bg-[#a9473b] hover:bg-[#863a31] text-white">Apply Now</Button>
-              </Link>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-[#0b578a] mb-6">Why Should You Choose Chandigarh University?</h2>
+          
+          <div className="grid grid-cols-4 gap-8">
+            <div className="p-6 rounded-lg bg-gray-50">
+              <div className="w-16 h-16 mx-auto mb-4 bg-[#fbb03b] rounded-full flex items-center justify-center">
+                <Image
+                  src="/images/icons/global.svg"
+                  alt="Global Recognition"
+                  width={32}
+                  height={32}
+                />
+              </div>
+              <h3 className="text-xl font-semibold mb-3 text-[#0b578a]">Global Recognition</h3>
+              <p className="text-gray-600">Ranked among World's Top 231 Universities</p>
             </div>
+            {/* Repeat for other features */}
           </div>
         </div>
 
-        {/* Programs Section */}
-        <h2 className="text-[#1f425c] text-2xl font-semibold text-center mb-8">
-          Explore Our Programs
-        </h2>
+        {/* Programs Grid */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-[#0b578a] text-center mb-8">Our Programs</h2>
+          <div className="grid grid-cols-4 gap-6">
+            <Image
+              src="/images/programs/engineering.jpg"
+              alt="Engineering"
+              width={300}
+              height={200}
+              className="w-full rounded-lg"
+            />
+            {/* Repeat for other programs */}
+          </div>
+        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          <ProgramCard
-            title="Engineering"
-            icon="/images/icons/engineering.svg"
-            link="/engineering/"
           />
           <ProgramCard
             title="Management (BBA/MBA)"
@@ -190,7 +188,15 @@ export const ProgramsSection = () => {
               }
               title="Research Excellence"
               description="A research-driven institution with 6500+ publications and 143 patents."
-            />
+        {/* Research Section */}
+        <div className="text-center">
+          <h2 className="text-3xl font-bold text-[#0b578a] mb-8">Pioneering Research</h2>
+          <div className="grid grid-cols-4 gap-6">
+            <div className="bg-[#0b578a] text-white p-6 rounded-lg">
+              <h3 className="text-4xl font-bold mb-2">5000+</h3>
+              <p>Research Papers</p>
+            </div>
+            {/* Repeat for other research stats */}
           </div>
         </div>
       </div>

@@ -24,52 +24,83 @@ const StatCard = ({ number, title, subtitle }: StatProps) => {
 
 export const StatsSection = () => {
   return (
-    <section className="py-8">
+    <section className="py-12 bg-[#0b578a] text-white">
       <div className="cu-container">
-        {/* World Rankings Banner */}
-        <div className="flex flex-col items-center mb-8">
-          <div className="bg-white rounded-xl shadow-lg p-6 md:p-10 flex flex-col items-center w-full max-w-2xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold mb-6">An Illustrious Legacy we continue to Shape</h1>
+          <div className="grid grid-cols-5 gap-8 text-center">
             <Image
-              src="https://www.cuchd.in/latest-assets/img/qsRaninking-2025.jpg"
-              alt="QS Rankings"
-              width={600}
-              height={300}
-              className="object-contain"
+              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+              alt="Stats"
+              width={200}
+              height={100}
+              className="mx-auto mb-4"
             />
+            <div>
+              <h2 className="text-5xl font-bold mb-2">154+</h2>
+              <p className="text-sm">Research Papers</p>
+            </div>
+            <div>
+              <h2 className="text-5xl font-bold mb-2">980+</h2>
+              <p className="text-sm">Faculty Members</p>
+            </div>
+            <div>
+              <h2 className="text-5xl font-bold mb-2">1350+</h2>
+              <p className="text-sm">Students</p>
+            </div>
+            <div>
+              <h2 className="text-5xl font-bold mb-2">100000+</h2>
+              <p className="text-sm">Alumni Network</p>
+            </div>
           </div>
         </div>
 
-        <h2 className="text-[#1f425c] text-2xl font-semibold text-center mb-6">An Illustrious Legacy we continue to Shape</h2>
-
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-          <StatCard
-            number="10+"
-            title="Years of Academic Excellence"
-          />
-          <StatCard
-            number="30,000+"
-            title="Students"
-          />
-          <StatCard
-            number="1500+"
-            title="Faculty Members"
-          />
-          <StatCard
-            number="6500+"
-            title="Research Publications"
-          />
-          <StatCard
-            number="150+"
-            title="Courses"
-          />
-          <StatCard
-            number="350+"
-            title="Global Partners"
-          />
+        {/* News Cards */}
+        <div className="grid grid-cols-4 gap-6 mb-12">
+          <div className="bg-white rounded-lg overflow-hidden">
+            <Image
+              src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+              alt="News 1"
+              width={300}
+              height={200}
+              className="w-full h-48 object-cover"
+            />
+            <div className="p-4">
+              <h3 className="text-[#0b578a] font-bold mb-2">Latest News</h3>
+              <p className="text-gray-600 text-sm">Read more about our latest achievements</p>
+            </div>
+          </div>
+          {/* Repeat for other cards */}
         </div>
 
-        {/* Placements Section */}
+        {/* Rankings Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-2xl font-bold mb-8">Proudly Distinguished by Our Prestigious Rankings and Recognitions</h2>
+          <div className="grid grid-cols-7 gap-4">
+            {/* Add ranking badges here */}
+          </div>
+        </div>
+
+        {/* Placements Overview */}
+        <div className="text-center">
+          <h2 className="text-2xl font-bold mb-8">Placements Overview</h2>
+          <div className="grid grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg p-6">
+              <Image
+                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+                alt="Placement Stats"
+                width={400}
+                height={300}
+                className="mx-auto mb-4"
+              />
+              <div className="text-[#0b578a]">
+                <h3 className="text-xl font-bold">54.75 LPA</h3>
+                <p>Highest Package</p>
+              </div>
+            </div>
+            {/* Repeat for other placement stats */}
+          </div>
+        </div>
       </div>
     </section>
   )
