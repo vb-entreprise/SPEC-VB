@@ -28,8 +28,14 @@ export const SecondaryMenu = () => {
   }, [])
 
   const menuItems = [
-    ["About", "Programs", "Academics", "Admissions"],
-    ["Campus Life", "Placements", "Research & Innovation", "International"]
+    "About",
+    "Programs", 
+    "Academics",
+    "Admissions",
+    "Campus Life",
+    "Placements",
+    "Research & Innovation",
+    "International"
   ]
 
   const extraLinks = [
@@ -46,13 +52,13 @@ export const SecondaryMenu = () => {
     >
       <div
         ref={menuRef}
-        className="w-full"
+        className="w-full px-4"
       >
-        <div className="max-w-[1400px] mx-auto">
-          <div className="hidden lg:flex flex-wrap justify-center items-center py-4 px-12 bg-[#0b578a]/20 backdrop-blur-xl rounded-lg">
-            {menuItems.map((item) => (
+        <div className="max-w-[1800px] mx-auto">
+          <div className="hidden lg:flex justify-center items-center py-4 px-12 bg-[#0b578a]/20 backdrop-blur-xl rounded-lg">
+            {menuItems.map((item, index) => (
               <div className="relative group" key={item}>
-                <button className="px-6 py-2 flex items-center gap-1 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors">
+                <button className="px-8 py-2 flex items-center gap-1 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors whitespace-nowrap">
                   {item}
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                 </button>
