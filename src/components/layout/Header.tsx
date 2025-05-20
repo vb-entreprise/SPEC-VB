@@ -23,8 +23,8 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-[#0b578a] ${
-      scrolled ? 'py-2' : 'py-4'
+    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+      scrolled ? 'bg-[#0b578a] py-2' : 'bg-transparent py-4'
     }`}>
       <div className="relative z-10">
         {/* Top Announcement Bar */}
@@ -201,7 +201,9 @@ export const Header = () => {
           {/* Secondary Navigation */}
           <div className="mt-2">
             <div className="max-w-[1200px] mx-auto">
-              <div className="hidden lg:flex justify-center items-center py-2 px-12 bg-white/10 backdrop-blur-sm rounded-lg">
+              <div className={`hidden lg:flex justify-center items-center py-2 px-12 rounded-lg ${
+                scrolled ? 'bg-white/10 backdrop-blur-sm' : 'bg-black/20'
+              }`}>
                 {[
                   "About",
                   "Programs",
