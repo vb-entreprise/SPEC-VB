@@ -111,7 +111,7 @@ export const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className="border-t border-[#ffffff33] py-2 relative z-20 bg-transparent">
+      <nav className="border-t border-[#ffffff33] py-1 relative z-20 bg-transparent">
         <div className="cu-container flex items-center">
           <div className="hidden lg:flex gap-6 text-white">
             <Link href="https://www.cuchd.in/" className="nav-link py-1 flex items-center gap-1">
