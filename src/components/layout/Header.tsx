@@ -132,8 +132,8 @@ export const Header = () => {
           </div>
           
           {/* Secondary Navigation */}
-          <div className="mt-2">
-            <div className="max-w-[900px] mx-auto ml-20">
+          <div className="mt-2 flex justify-center">
+            <div className="max-w-[900px] w-full">
               <div className={`hidden lg:flex justify-center items-center py-2 px-12 rounded-lg ${
                 scrolled ? 'bg-white/20 backdrop-blur-lg' : 'bg-black/20 backdrop-blur-sm'
               }`}>
