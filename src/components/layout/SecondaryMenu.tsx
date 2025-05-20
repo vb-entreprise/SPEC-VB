@@ -52,13 +52,13 @@ export const SecondaryMenu = () => {
     >
       <div
         ref={menuRef}
-        className="w-full px-8"
+        className="w-full px-4"
       >
-        <div className="max-w-[1200px] mx-auto">
-          <div className="hidden lg:flex justify-between items-center py-2 px-4 bg-[#0b578a]/20 backdrop-blur-xl rounded-lg">
+        <div className="max-w-[1000px] mx-auto">
+          <div className="hidden lg:flex justify-between items-center py-1.5 px-2 bg-[#0b578a]/20 backdrop-blur-xl rounded-lg">
             {menuItems.map((item, index) => (
               <div className="relative group" key={item}>
-                <button className="px-3 py-1 flex items-center gap-1 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors whitespace-nowrap">
+                <button className="px-2 py-1 flex items-center gap-1 text-white uppercase font-bold text-[13px] tracking-wide hover:text-[#fbb03b] transition-colors whitespace-nowrap">
                   {item}
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                 </button>
