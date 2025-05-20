@@ -31,7 +31,7 @@ export const Header = () => {
         <div className={`announcement-bar overflow-hidden relative py-2 transition-all duration-300 ${
           scrolled ? 'h-0 opacity-0' : 'h-auto opacity-100'
         }`}>
-          <div className="animate-marquee inline-block">
+          <div className="announcement-content">
             Register Now for CU Joint Campus Placement Programme <Link href="https://www.cuchd.in/placements/frmRegistration.aspx?Type=jpp2019" className="underline ml-1">Register Now</Link>
             <span className="mx-3">|</span>
             International Conference on Innovative Trends in Electrical, Electronics and Bio-Technology Engineering <Link href="https://www.cuchd.in/conference/iciteeb-2025/" className="underline ml-1">Register Now</Link>
@@ -133,9 +133,9 @@ export const Header = () => {
           
           {/* Secondary Navigation */}
           <div className="mt-2">
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[900px] mx-auto">
               <div className={`hidden lg:flex justify-center items-center py-2 px-12 rounded-lg ${
-                scrolled ? 'bg-white/10 backdrop-blur-sm' : 'bg-black/20'
+                scrolled ? 'bg-white/20 backdrop-blur-lg' : 'bg-black/20 backdrop-blur-sm'
               }`}>
                 {[
                   "About",
