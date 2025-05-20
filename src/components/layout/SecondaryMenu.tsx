@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
+/**
+ * @author VB Entreprise
+ * @description Secondary navigation menu with sticky behavior
+ */
 export const SecondaryMenu = () => {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -8,7 +12,7 @@ export const SecondaryMenu = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 180)
+      setScrolled(window.scrollY > 0)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -47,18 +51,22 @@ export const SecondaryMenu = () => {
   return (
     <nav
       className={`w-full flex justify-center absolute top-[180px] left-0 z-30 pointer-events-auto transition-all duration-300 ${
-        scrolled ? "fixed top-0 bg-[#0b578a]" : "bg-transparent"
+        scrolled ? "fixed top-0 bg-[#0b578a] shadow-lg" : "bg-transparent"
       }`}
+      style={{
+        position: scrolled ? 'fixed' : 'absolute',
+        top: scrolled ? '0' : '180px',
+      }}
     >
       <div
         ref={menuRef}
-        className={`container mx-auto flex justify-center items-center py-2 px-6 transition-all duration-300`}
+        className={`cu-container flex justify-center items-center py-2 px-6 transition-all duration-300`}
       >
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-2 justify-center w-full">
           {menuItems.map((item) => (
             <div className="relative group" key={item}>
-              <button className="px-4 py-1 flex items-center gap-2 text-white uppercase font-extrabold text-base tracking-wide hover:underline hover:decoration-white transition-all">
+              <button className="px-4 py-2 flex items-center gap-2 text-white uppercase font-extrabold text-base tracking-wide hover:underline hover:decoration-[#fbb03b] transition-all">
                 {item}
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
               </button>
