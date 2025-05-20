@@ -16,14 +16,14 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100)
+      setScrolled(window.scrollY > 80)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-500 ${
+    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
       scrolled ? 'bg-[#0b578a]' : 'bg-gradient-to-b from-black/70 to-transparent'
     }`}>
       <div className="relative z-10">
@@ -84,16 +84,16 @@ export const Header = () => {
 
         {/* Main Header */}
         <div className={`relative transition-all duration-300 ${
-          scrolled ? 'py-3' : 'py-4'
+          scrolled ? 'py-2' : 'py-4'
         }`}>
-          <div className="cu-container flex items-center relative z-10">
+          <div className="cu-container flex items-center justify-between relative z-10">
             <Link href="/" className="z-10">
               <Image
                 src="https://spec.edu.in//images/Colleges_Logo/EMBOSS-LOGO-SPEC-INSTITUTES.png"
                 alt="SPEC Institutes Logo"
                 width={180}
                 height={60}
-                className="w-auto h-[40px]"
+                className={`w-auto transition-all duration-300 ${scrolled ? 'h-[35px]' : 'h-[40px]'}`}
                 priority
               />
             </Link>

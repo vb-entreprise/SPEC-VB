@@ -8,7 +8,7 @@ export const SecondaryMenu = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100)
+      setScrolled(window.scrollY > 80)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -46,21 +46,21 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className={`w-full flex justify-center fixed z-30 pointer-events-auto transition-all duration-500 ${
-        scrolled ? "top-[72px] bg-[#0b578a] shadow-lg" : "top-[180px] bg-transparent"
+      className={`w-full flex justify-center fixed z-30 pointer-events-auto transition-all duration-300 ${
+        scrolled ? "top-[60px] bg-[#0b578a] shadow-lg" : "top-[180px] bg-transparent"
       }`}
     >
       <div
         ref={menuRef}
-        className={`cu-container mx-auto flex justify-center items-center py-2 transition-all duration-500 ${
-          scrolled ? '' : 'bg-[#0b578a]/20 backdrop-blur rounded-lg'
+        className={`cu-container mx-auto flex justify-center items-center py-2 px-4 transition-all duration-300 ${
+          scrolled ? 'py-1' : 'bg-[#0b578a]/20 backdrop-blur-sm rounded-lg'
         }`}
       >
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-4 justify-center w-full">
           {menuItems.map((item) => (
             <div className="relative group" key={item}>
-              <button className="px-4 py-2 flex items-center gap-2 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors relative">
+              <button className="px-3 py-2 flex items-center gap-1.5 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors relative">
                 {item}
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#fbb03b] scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
