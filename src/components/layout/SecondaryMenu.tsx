@@ -50,21 +50,21 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className={`w-full flex justify-center absolute z-30 pointer-events-auto transition-all duration-300 ${
-        scrolled ? "fixed top-0 left-0" : "top-[180px]"
+      className={`w-full flex justify-center absolute z-30 pointer-events-auto transition-all duration-500 ${
+        scrolled ? "fixed top-0 left-0 bg-[#0b578a] shadow-lg" : "top-[180px]"
       }`}
     >
       <div
         ref={menuRef}
-        className={`cu-container mx-auto flex justify-center items-center transition-all duration-300 ${
-          scrolled ? 'py-2 bg-[#0b578a]' : 'py-1 bg-[#0b578a]/20 backdrop-blur'
+        className={`cu-container mx-auto flex justify-center items-center transition-all duration-500 ${
+          scrolled ? 'py-3' : 'py-2 bg-[#0b578a]/20 backdrop-blur'
         }`}
       >
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-4 justify-center w-full">
           {menuItems.map((item) => (
             <div className="relative group" key={item}>
-              <button className="px-3 py-1 flex items-center gap-2 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors">
+              <button className="px-4 py-2 flex items-center gap-2 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors">
                 {item}
                 <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
               </button>
