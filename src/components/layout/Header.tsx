@@ -23,8 +23,8 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-      scrolled ? 'bg-[#0b578a]' : 'bg-gradient-to-b from-black/70 to-transparent'
+    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 bg-[#0b578a] ${
+      scrolled ? 'py-2' : 'py-4'
     }`}>
       <div className="relative z-10">
         {/* Top Announcement Bar */}
@@ -85,7 +85,7 @@ export const Header = () => {
         {/* Main Header */}
         <div className={`relative transition-all duration-300 ${
           scrolled ? 'py-2' : 'py-2'
-        }`}>
+        } border-b border-white/10`}>
           <div className="cu-container flex items-center justify-between relative z-10">
             <Link href="/" className="z-10">
               <Image
@@ -194,6 +194,30 @@ export const Header = () => {
                 <button aria-label="Search" className="text-white">
                   <span>Search</span>
                 </button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Secondary Navigation */}
+          <div className="mt-2">
+            <div className="max-w-[1200px] mx-auto">
+              <div className="hidden lg:flex justify-center items-center py-2 px-12 bg-white/10 backdrop-blur-sm rounded-lg">
+                {[
+                  "About",
+                  "Programs",
+                  "Academics",
+                  "Admissions",
+                  "Campus Life",
+                  "Placements",
+                  "Research & Innovation"
+                ].map((item) => (
+                  <div className="relative group" key={item}>
+                    <button className="px-4 py-2 flex items-center gap-1 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors">
+                      {item}
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </button>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
