@@ -50,21 +50,24 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className={`w-full flex justify-center absolute top-[180px] left-0 z-30 pointer-events-auto transition-all duration-300 ${
+      className={`w-full flex justify-center absolute top-[180px] left-1/2 z-30 -translate-x-1/2 pointer-events-auto transition-all duration-300 ${
         scrolled ? "fixed top-0" : ""
       }`}
       style={{
         position: scrolled ? 'fixed' : 'absolute',
         top: scrolled ? '0' : '180px',
+        width: '75%',
+        maxWidth: '1280px',
         background: scrolled ? 'rgba(11,87,138,0.95)' : 'rgba(11,87,138,0.2)',
         backdropFilter: 'blur(5px)',
         WebkitBackdropFilter: 'blur(5px)',
+        borderRadius: '18px',
         boxShadow: scrolled ? '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' : 'none',
       }}
     >
       <div
         ref={menuRef}
-        className="cu-container flex justify-center items-center py-2 px-6 transition-all duration-300"
+        className="w-full flex justify-center items-center py-2 px-6 transition-all duration-300"
       >
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-2 justify-center w-full">
