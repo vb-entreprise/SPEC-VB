@@ -46,13 +46,15 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className={`w-full flex justify-center bg-transparent fixed top-[180px] left-1/2 z-30 -translate-x-1/2 pointer-events-auto transition-all duration-300`}
+      className={`w-full flex justify-center bg-transparent absolute top-[180px] left-1/2 z-30 -translate-x-1/2 pointer-events-auto transition-all duration-300 ${
+        scrolled ? "fixed top-[80px]" : ""
+      }`}
     >
       <div
         ref={menuRef}
         className="cu-container flex justify-center items-center max-w-3xl w-[65%] py-1 px-4"
         style={{
-          background: 'rgba(40,60,90,0.95)',
+          background: scrolled ? 'rgba(40,60,90,0.95)' : 'rgba(40,60,90,0.2)',
           borderRadius: '18px',
           backdropFilter: 'blur(5px) contrast(80%)',
           WebkitBackdropFilter: 'blur(5px) contrast(80%)',

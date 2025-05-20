@@ -24,8 +24,8 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
-      scrolled ? "bg-[#1f425c] shadow-lg" : "bg-transparent"
+    <header className={`w-full absolute top-0 left-0 z-50 transition-all duration-300 ${
+      scrolled ? "fixed bg-[#1f425c]/95 shadow-lg backdrop-blur-sm" : "bg-transparent"
     }`}>
       <div className="relative z-10">
       {/* Top Announcement Bar */}
@@ -41,7 +41,7 @@ export const Header = () => {
 
       {/* Top Secondary Bar */}
       <div className={`text-white py-2 px-4 transition-all duration-300 ${
-        scrolled ? "bg-[#1f425c]/95" : "bg-transparent backdrop-blur-sm"
+        scrolled ? "bg-[#1f425c]/95 backdrop-blur-sm" : "bg-transparent"
       }`}>
         <div className="cu-container flex justify-between items-center">
           {/* Left Links */}
@@ -83,7 +83,7 @@ export const Header = () => {
 
       {/* Main Header */}
       <div className={`relative transition-all duration-300 ${
-        scrolled ? "bg-[#1f425c]/95" : "bg-transparent backdrop-blur-sm"
+        scrolled ? "bg-[#1f425c]/95 backdrop-blur-sm" : "bg-transparent"
       }`}>
         <div className="cu-container flex justify-between items-center py-3 relative z-10">
           <Link href="/" className="z-10">
@@ -120,7 +120,7 @@ export const Header = () => {
 
       {/* Main Navigation */}
       <nav className={`border-t border-[#ffffff33] py-1 relative z-20 transition-all duration-300 ${
-        scrolled ? "bg-[#1f425c]/95" : "bg-transparent backdrop-blur-sm"
+        scrolled ? "bg-[#1f425c]/95 backdrop-blur-sm" : "bg-transparent"
       }`}>
         <div className="cu-container flex items-center">
           <div className="hidden lg:flex gap-6 text-white">
