@@ -51,13 +51,13 @@ export const SecondaryMenu = () => {
   return (
     <nav
       className={`w-full flex justify-center absolute z-30 pointer-events-auto transition-all duration-500 ${
-        scrolled ? "fixed top-0 left-0 bg-[#0b578a] shadow-lg" : "top-[180px]"
+        scrolled ? "fixed top-[72px] left-0 bg-[#0b578a] shadow-lg" : "top-[180px]"
       }`}
     >
       <div
         ref={menuRef}
         className={`cu-container mx-auto flex justify-center items-center transition-all duration-500 ${
-          scrolled ? 'py-3' : 'py-2 bg-[#0b578a]/20 backdrop-blur'
+          scrolled ? 'py-2' : 'py-2 bg-[#0b578a]/20 backdrop-blur'
         }`}
       >
         {/* Desktop Menu */}

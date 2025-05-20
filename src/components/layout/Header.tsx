@@ -8,13 +8,14 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleMenuToggle = (menuName: string) => {
     setActiveMenu(activeMenu === menuName ? null : menuName)
   }
 
   useEffect(() => {
-    const handleScroll = () => { 
+    const handleScroll = () => {
       setScrolled(window.scrollY > 100)
     }
     window.addEventListener("scroll", handleScroll)
@@ -22,7 +23,7 @@ export const Header = () => {
   }, [])
 
   return (
-    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${
+    <header className={`w-full fixed top-0 left-0 z-50 transition-all duration-500 ${
       scrolled ? 'bg-[#0b578a]' : 'bg-gradient-to-b from-black/70 to-transparent'
     }`}>
       <div className="relative z-10">
@@ -83,9 +84,9 @@ export const Header = () => {
 
         {/* Main Header */}
         <div className={`relative transition-all duration-300 ${
-          scrolled ? 'py-2' : 'py-3'
+          scrolled ? 'py-3' : 'py-4'
         }`}>
-          <div className="cu-container flex items-center py-3 relative z-10">
+          <div className="cu-container flex items-center relative z-10">
             <Link href="/" className="z-10">
               <Image
                 src="https://spec.edu.in//images/Colleges_Logo/EMBOSS-LOGO-SPEC-INSTITUTES.png"
@@ -98,6 +99,7 @@ export const Header = () => {
             </Link>
 
             {/* Primary Navigation */}
+            <div className="flex-1">
             <div className="hidden lg:flex gap-6 text-white ml-8">
               <Link href="https://www.cuchd.in/" className="nav-link py-1 flex items-center gap-1">
                 Campuses
@@ -172,6 +174,7 @@ export const Header = () => {
               <Link href="/blogs/" className="nav-link py-2">Blogs</Link>
               <Link href="/contact/index.php" className="nav-link py-2">Contact Us</Link>
             </div>
+            </div>
 
             <div className="ml-auto flex items-center gap-4">
               <div className="flex items-center gap-4">
@@ -195,6 +198,7 @@ export const Header = () => {
             </div>
           </div>
         </div>
+
       </div>
     </header>
   )
