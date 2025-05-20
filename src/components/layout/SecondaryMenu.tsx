@@ -50,12 +50,14 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className={`w-full flex justify-center absolute top-[180px] left-1/2 z-30 -translate-x-1/2 pointer-events-auto transition-all duration-300 ${
+      className={`w-full flex justify-center absolute top-[180px] z-30 pointer-events-auto transition-all duration-300 ${
         scrolled ? "fixed top-0" : ""
       }`}
       style={{
         position: scrolled ? 'fixed' : 'absolute',
         top: scrolled ? '0' : '180px',
+        left: '50%',
+        transform: 'translateX(-50%)',
         width: '75%',
         maxWidth: '1280px',
         background: scrolled ? 'rgba(11,87,138,0.95)' : 'rgba(11,87,138,0.2)',
@@ -70,10 +72,10 @@ export const SecondaryMenu = () => {
         className="w-full flex justify-center items-center py-2 px-6 transition-all duration-300"
       >
         {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-2 justify-center w-full">
+        <div className="hidden lg:flex gap-4 justify-center w-full">
           {menuItems.map((item) => (
             <div className="relative group" key={item}>
-              <button className="px-4 py-2 flex items-center gap-2 text-white uppercase font-extrabold text-base tracking-wide hover:underline hover:decoration-[#fbb03b] transition-all">
+              <button className="px-3 py-2 flex items-center gap-2 text-white uppercase font-extrabold text-base tracking-wide hover:underline hover:decoration-[#fbb03b] transition-all">
                 {item}
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
               </button>
