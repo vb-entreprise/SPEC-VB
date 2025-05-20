@@ -8,7 +8,7 @@ export const SecondaryMenu = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 100)
+      setScrolled(window.scrollY > 180)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
@@ -46,20 +46,13 @@ export const SecondaryMenu = () => {
 
   return (
     <nav
-      className={`w-full flex justify-center bg-transparent absolute top-[180px] left-1/2 z-30 -translate-x-1/2 pointer-events-auto transition-all duration-300 ${
-        scrolled ? "fixed top-[80px]" : ""
+      className={`w-full flex justify-center absolute top-[180px] left-0 z-30 pointer-events-auto transition-all duration-300 ${
+        scrolled ? "fixed top-0 bg-[#0b578a]" : "bg-transparent"
       }`}
     >
       <div
         ref={menuRef}
-        className="cu-container flex justify-center items-center max-w-4xl w-[75%] py-2 px-6"
-        style={{
-          background: scrolled ? 'rgba(11,87,138,0.95)' : 'rgba(11,87,138,0.2)',
-          borderRadius: '18px',
-          backdropFilter: 'blur(5px) contrast(80%)',
-          WebkitBackdropFilter: 'blur(5px) contrast(80%)',
-          transition: 'background 0.3s',
-        }}
+        className={`container mx-auto flex justify-center items-center py-2 px-6 transition-all duration-300`}
       >
         {/* Desktop Menu */}
         <div className="hidden lg:flex gap-2 justify-center w-full">
