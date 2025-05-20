@@ -8,7 +8,6 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
-  const [isAtTop, setIsAtTop] = useState(true)
 
   const handleMenuToggle = (menuName: string) => {
     setActiveMenu(activeMenu === menuName ? null : menuName)
@@ -17,19 +16,16 @@ export const Header = () => {
   useEffect(() => {
     const handleScroll = () => { 
       setScrolled(window.scrollY > 100)
-      setIsAtTop(window.scrollY < 50)
     }
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   return (
-    <header className={`w-full absolute top-0 left-0 z-50 transition-all duration-300 ${
-      scrolled ? "fixed bg-[#1f425c]/95 shadow-lg backdrop-blur-sm" : "bg-transparent"
-    }`}>
+    <header className="w-full absolute top-0 left-0 z-50">
       <div className="relative z-10">
       {/* Top Announcement Bar */}
-      <div className="announcement-bar overflow-hidden relative py-3">
+      <div className="announcement-bar overflow-hidden relative py-2">
         <div className="animate-marquee inline-block">
           Register Now for CU Joint Campus Placement Programme <Link href="https://www.cuchd.in/placements/frmRegistration.aspx?Type=jpp2019" className="underline ml-1">Register Now</Link>
           <span className="mx-3">|</span>
@@ -40,9 +36,7 @@ export const Header = () => {
       </div>
 
       {/* Top Secondary Bar */}
-      <div className={`text-white py-4 px-4 transition-all duration-300 ${
-        scrolled ? "bg-[#1f425c]/95 backdrop-blur-sm" : "bg-transparent"
-      }`}>
+      <div className="text-white py-2 px-4 bg-transparent">
         <div className="cu-container flex justify-between items-center">
           {/* Left Links */}
           <div className="flex gap-4 text-sm">
@@ -82,17 +76,15 @@ export const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className={`relative transition-all duration-300 ${
-        scrolled ? "bg-[#1f425c]/95 backdrop-blur-sm" : "bg-transparent"
-      }`}>
-        <div className="cu-container flex justify-between items-center py-6 relative z-10">
+      <div className="relative bg-transparent">
+        <div className="cu-container flex justify-between items-center py-3 relative z-10">
           <Link href="/" className="z-10">
             <Image
               src="https://spec.edu.in//images/Colleges_Logo/EMBOSS-LOGO-SPEC-INSTITUTES.png"
               alt="SPEC Institutes Logo"
               width={180}
               height={60}
-              className="w-auto h-[60px]"
+              className="w-auto h-[45px]"
               priority
             />
           </Link>
@@ -119,9 +111,7 @@ export const Header = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`border-t border-[#ffffff33] py-4 relative z-20 transition-all duration-300 ${
-        scrolled ? "bg-[#1f425c]/95 backdrop-blur-sm" : "bg-transparent"
-      }`}>
+      <nav className="border-t border-[#ffffff33] py-2 relative z-20 bg-transparent">
         <div className="cu-container flex items-center">
           <div className="hidden lg:flex gap-6 text-white">
             <Link href="https://www.cuchd.in/" className="nav-link py-1 flex items-center gap-1">
