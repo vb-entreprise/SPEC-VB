@@ -70,7 +70,7 @@ export const ProgramsSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-[#0b578a] mb-6">Why Should You Choose Chandigarh University?</h2>
           
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="p-6 rounded-lg bg-gray-50">
               <div className="w-16 h-16 mx-auto mb-4 bg-[#fbb03b] rounded-full flex items-center justify-center">
                 <Image
@@ -89,7 +89,7 @@ export const ProgramsSection = () => {
         {/* Programs Grid */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-[#0b578a] text-center mb-8">Our Programs</h2>
-          <div className="grid grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <ProgramCard
               title="Engineering (B.Tech/M.Tech)"
               icon="/images/icons/engineering.svg"

@@ -1,14 +1,15 @@
 "use client"
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Button } from "@/components/ui/button"
+import { Menu } from "lucide-react"
 
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
 
   const handleMenuToggle = (menuName: string) => {
     setActiveMenu(activeMenu === menuName ? null : menuName)
@@ -93,13 +94,13 @@ export const Header = () => {
                 alt="SPEC Institutes Logo"
                 width={180}
                 height={60}
-                className={`w-auto transition-all duration-300 ${scrolled ? 'h-[35px]' : 'h-[40px]'}`}
+                className={`w-auto transition-all duration-300 ${scrolled ? 'h-[30px] md:h-[35px]' : 'h-[35px] md:h-[40px]'}`}
                 priority
               />
             </Link>
 
             {/* Primary Navigation */}
-            <div className="flex-1 flex justify-start ml-20">
+            <div className="hidden md:flex flex-1 justify-start ml-20">
             <div className="hidden lg:flex gap-8 text-white">
               <Link href="/student-services/libraries.php" className="nav-link py-2">Library</Link>
               <Link href="/student-services/" className="nav-link py-2">Student Services</Link>
@@ -109,9 +110,9 @@ export const Header = () => {
             </div>
             </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <div className="flex items-center gap-4">
-                <Link href="tel:+1800121288800" className="flex items-center gap-2 text-white">
+                <Link href="tel:+1800121288800" className="hidden md:flex items-center gap-2 text-white">
                   <Image
                     src="https://www.cuchd.in/includes/assets/images/header-footer/phone-icon.webp"
                     alt="Phone Icon"
@@ -124,15 +125,48 @@ export const Header = () => {
                   </div>
                 </Link>
 
-                <button aria-label="Search" className="text-white">
+                <button aria-label="Search" className="hidden md:block text-white">
                   <span>Search</span>
                 </button>
               </div>
+              
+              {/* Mobile Menu */}
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="md:hidden text-white">
+                    <Menu className="h-6 w-6" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white">
+                  <div className="flex flex-col gap-4 mt-6">
+                    <Link href="/student-services/libraries.php" className="px-4 py-2 text-lg font-semibold hover:bg-gray-100 rounded-md">
+                      Library
+                    </Link>
+                    <Link href="/student-services/" className="px-4 py-2 text-lg font-semibold hover:bg-gray-100 rounded-md">
+                      Student Services
+                    </Link>
+                    <Link href="/jobs/" className="px-4 py-2 text-lg font-semibold hover:bg-gray-100 rounded-md">
+                      Career
+                    </Link>
+                    <Link href="/spec-talk/" className="px-4 py-2 text-lg font-semibold hover:bg-gray-100 rounded-md">
+                      SPEC Talk
+                    </Link>
+                    <Link href="/contact/index.php" className="px-4 py-2 text-lg font-semibold hover:bg-gray-100 rounded-md">
+                      Contact Us
+                    </Link>
+                    <div className="border-t border-gray-200 mt-4 pt-4">
+                      <Link href="tel:+1800121288800" className="flex items-center gap-2 px-4 py-2 text-lg font-semibold">
+                        <span>Call: 1800121288800</span>
+                      </Link>
+                    </div>
+                  </div>
+                </SheetContent>
+              </Sheet>
             </div>
           </div>
           
           {/* Secondary Navigation */}
-          <div className="mt-2 flex justify-center">
+          <div className="hidden md:flex mt-2 justify-center">
             <div className="max-w-[1800px] w-full">
               <div className={`hidden lg:flex justify-center items-center py-2 px-12 rounded-lg ${
                 scrolled ? 'bg-white/20 backdrop-blur-lg' : 'bg-black/20 backdrop-blur-sm'

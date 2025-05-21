@@ -65,7 +65,7 @@ export const NewsSection = () => {
       <div className="cu-container">
         <h2 className="text-3xl font-bold text-[#0b578a] text-center mb-12">Latest News & Updates</h2>
 
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg overflow-hidden shadow-sm">
             <Image
               src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
@@ -92,7 +92,7 @@ export const NewsSection = () => {
           Innovation and discovery are at the heart of our approach to education and development.
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 mb-6">
           <div className="text-center">
             <span className="block text-3xl font-bold">5000+</span>
             <span className="text-sm">RESEARCH PAPERS</span>
@@ -111,7 +111,7 @@ export const NewsSection = () => {
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Image src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Research Lab" width={270} height={150} className="rounded-md" />
           <Image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Research Center" width={270} height={150} className="rounded-md" />
           <Image src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Innovation Hub" width={270} height={150} className="rounded-md" />

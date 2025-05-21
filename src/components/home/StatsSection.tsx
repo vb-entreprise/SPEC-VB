@@ -28,7 +28,7 @@ export const StatsSection = () => {
       <div className="cu-container">
         <h2 className="text-center text-3xl font-semibold mb-8">An Illustrious Legacy we continue to Shape</h2>
         
-        <div className="grid grid-cols-5 gap-8 items-center justify-center text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 items-center justify-center text-center">
           <div className="flex flex-col items-center">
             <span className="text-4xl font-bold mb-1">154+</span>
             <span className="text-sm uppercase">Programs</span>
@@ -56,7 +56,7 @@ export const StatsSection = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-5 gap-4 mt-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mt-12">
           <div className="relative aspect-video group cursor-pointer">
             <Image
               src="https://images.pexels.com/photos/2422290/pexels-photo-2422290.jpeg"

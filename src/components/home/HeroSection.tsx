@@ -21,9 +21,9 @@ export const HeroSection = () => {
       {/* Overlay */}
       <div className="fixed inset-0 bg-black/60 -z-10"></div>
 
-      <div className="cu-container relative h-full flex items-center justify-between z-10">
+      <div className="cu-container relative h-full flex flex-col md:flex-row items-center justify-between gap-8 z-10">
         {/* Left Content - Visible on larger screens */}
-        <div className="hidden md:block text-white max-w-xl">
+        <div className="text-white max-w-xl text-center md:text-left">
           <h1 className="text-4xl font-bold mb-4">
             Best Private University in Punjab (India)
           </h1>
@@ -34,7 +34,7 @@ export const HeroSection = () => {
           {/* CUCET Countdown Timer */}
           <div className="mt-6 bg-[#c40c12]/90 p-4 rounded-md">
             <p className="text-white font-medium mb-2">CUCET Scholarship registrations closing on 15th May 2025</p>
-            <div className="flex gap-4 mb-3">
+            <div className="flex flex-wrap justify-center md:justify-start gap-4 mb-3">
               <div className="bg-white rounded-md text-black p-2 text-center w-16">
                 <span className="block text-xl font-bold">1</span>
                 <span className="text-xs">Days</span>
@@ -61,7 +61,7 @@ export const HeroSection = () => {
         </div>
 
         {/* Login Form Card */}
-        <Card className="w-full max-w-sm bg-white shadow-lg">
+        <Card className="w-full max-w-sm bg-white shadow-lg mx-auto md:mx-0">
           <CardHeader className="bg-[#c40c12] text-white text-center py-3">
             <h2 className="text-lg font-semibold">CHANDIGARH UNIVERSITY LOGIN</h2>
           </CardHeader>

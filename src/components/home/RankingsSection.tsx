@@ -36,19 +36,23 @@ export const RankingsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="flex flex-col items-center">
             <Image src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=100&q=80" alt="Ranking" width={100} height={80} className="mb-2 rounded" />
-            <RankingCard
+            <div className="w-full">
+              <RankingCard
               number="#231"
               description="WORLDWIDE"
               source="QS World University Rankings (2025)"
-            />
+              />
+            </div>
           </div>
           <div className="flex flex-col items-center">
             <Image src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=100&q=80" alt="Ranking" width={100} height={80} className="mb-2 rounded" />
-            <RankingCard
+            <div className="w-full">
+              <RankingCard
               number="#301-350"
               description="AMONG ASIAN UNIVERSITIES"
               source="QS Asia University Rankings (2024)"
-            />
+              />
+            </div>
           </div>
           <div className="flex flex-col items-center">
             <Image src="https://images.unsplash.com/photo-1517520287167-4bbf64a00d66?auto=format&fit=crop&w=100&q=80" alt="Ranking" width={100} height={80} className="mb-2 rounded" />
