@@ -197,3 +197,5 @@ export const Header = () => {
     </header>
   )
 }
+
+export { Header }
