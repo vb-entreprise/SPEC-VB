@@ -189,7 +189,7 @@ export const Header = () => {
                   "Research & Innovation",
                   "International"
                 ].map((item) => (
-                  <div className="relative group" key={item}>
+                  <div className="relative group\" key={item}>
                     <button className="px-8 py-2 flex items-center gap-1 text-white uppercase font-bold text-sm tracking-wide hover:text-[#fbb03b] transition-colors whitespace-nowrap">
                       {item}
                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m6 9 6 6 6-6"/></svg>
