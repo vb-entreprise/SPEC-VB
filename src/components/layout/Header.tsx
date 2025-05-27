@@ -7,6 +7,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 
+/**
+ * @author VB Entreprise
+ * @description Header component for the application that includes:
+ * - Top announcement bar
+ * - Secondary navigation bar with social links
+ * - Main header with logo and primary navigation
+ * - Mobile responsive menu
+ */
 export const Header = () => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
   const [scrolled, setScrolled] = useState(false)
@@ -192,10 +200,7 @@ export const Header = () => {
             </div>
           </div>
         </div>
-
       </div>
     </header>
   )
 }
-
-export { Header }
